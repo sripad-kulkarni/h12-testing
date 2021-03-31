@@ -20,4 +20,6 @@ from testing import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('office/', views.office),
+    path'school/', views.school),
 ]
