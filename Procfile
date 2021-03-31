@@ -1,1 +1,1 @@
-web: gunicorn h12testing.wsgi 
+web: gunicorn h12testing.wsgi --timeout 10
