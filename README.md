@@ -1,4 +1,4 @@
-# h12-testing
+# 
 
 **This is an app in Python-Django** to Implement an H12 error on Heroku and resolving with an application level timeout.
 
@@ -15,7 +15,7 @@ Currently the app has a timeout of 10 seconds set in the `Procfile`-
 ```
 web: gunicorn h12testing.wsgi --timeout 10
 ```
-You can remove `--timeout 10` to see the Heroku router throw H12 on the path `https:\\<app-name>.herokuapp.com\`.
+*You can remove `--timeout 10` to see the Heroku router throw H12 on the path `https:\\<app-name>.herokuapp.com\`.*
 
 **How did we implement the H12?**
 
@@ -34,5 +34,7 @@ Paths on the app are defined in the file `h12testing/urls.py`:
     path('school/', views.school),                      ----------->  https://h12-testing-hyd.herokuapp.com/school/
 ```
 As you can see here, the path `https://h12-testing-hyd.herokuapp.com/` points to a function `home` inside the `views` (`views.py`). Similarly, other two paths point to functions `office` and `school` in `views.py`.
+
+
 
 Feel free to clone this repo and implement it yourself!
