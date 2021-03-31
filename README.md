@@ -2,14 +2,14 @@
 
 **This is an app in Python-Django** to Implement an H12 error on Heroku and resolving with an application level timeout.
 
-Heroku app name: `h12-testing-hyd`
-App URL: `h12-testing-hyd.herokuapp.com`
+Heroku app name: `h12-testing-t1`
+App URL: `h12-testing-t1.herokuapp.com`
 
 Paths available on the app:
 
-- https://h12-testing-hyd.herokuapp.com/         -----------> This path should throw an H12 error if removed the timeout.
-- https://h12-testing-hyd.herokuapp.com/office/
-- https://h12-testing-hyd.herokuapp.com/school/
+- https://h12-testing-t1.herokuapp.com/         -----------> This path should throw an H12 error if removed the timeout.
+- https://h12-testing-t1.herokuapp.com/office/
+- https://h12-testing-t1.herokuapp.com/school/
 
 Currently the app has a timeout of 10 seconds set in the `Procfile`-
 ```
@@ -29,9 +29,9 @@ def home(request):
 Paths on the app are defined in the file `h12testing/urls.py`:
 ```
     path('admin/', admin.site.urls),                    ----------->  Default path (We do not work with this here).
-    path('', views.home),                               ----------->  https://h12-testing-hyd.herokuapp.com/
-    path('office/', views.office),                      ----------->  https://h12-testing-hyd.herokuapp.com/office/
-    path('school/', views.school),                      ----------->  https://h12-testing-hyd.herokuapp.com/school/
+    path('', views.home),                               ----------->  https://h12-testing-t1.herokuapp.com/
+    path('office/', views.office),                      ----------->  https://h12-testing-t1.herokuapp.com/office/
+    path('school/', views.school),                      ----------->  https://h12-testing-t1.herokuapp.com/school/
 ```
 As you can see here, the path `https://h12-testing-hyd.herokuapp.com/` points to a function `home` inside the `views` (`views.py`). Similarly, other two paths point to functions `office` and `school` in `views.py`.
 
